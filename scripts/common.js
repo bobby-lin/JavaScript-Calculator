@@ -49,7 +49,11 @@ function clearEqn() {
 }
 
 function evaluateDisplay() {
-    ans = eval(eqn);
-    setDisplayElemVal(ans);
-    resetEqn();
+    try {
+        ans = eval(eqn);
+        setDisplayElemVal(ans);
+        resetEqn();
+    } catch (e) {
+        setDisplayElemVal("Invalid operation");
+    }
 }
