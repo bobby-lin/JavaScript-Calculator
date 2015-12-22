@@ -1,3 +1,11 @@
+body {
+    background-color: black;
+}
+
 #display {
     text-align: right;
+}
+
+#header {
+    color: gold;
 }
