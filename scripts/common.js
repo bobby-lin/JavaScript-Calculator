@@ -30,6 +30,7 @@ function resetEqn() {
 function isAnsEmpty() {
     return ans == "";
 }
+
 function addDisplay(item) {
     if(!isAnsEmpty()) {
         if(isOperator(item)) {
