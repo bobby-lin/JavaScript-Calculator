@@ -5,9 +5,26 @@
 
 var eqn = "";
 
+function getDisplayElem() {
+    return document.getElementById("display");
+}
+
+function setDisplayElemVal(val) {
+    var e = getDisplayElem();
+    e.value = val;
+}
+
 function addDisplay(item) {
-    var e = document.getElementById("display");
     eqn += item;
-    e.value = eqn;
-    console.log(e.value);
+    setDisplayElemVal(eqn);
+}
+
+function clearEqn() {
+    eqn = "";
+}
+
+function evaluateDisplay() {
+    var ans = eval(eqn);
+    setDisplayElemVal(ans);
+    clearEqn();
 }
