@@ -4,6 +4,7 @@
  */
 
 var eqn = "";
+var ans = "";
 
 function getDisplayElem() {
     return document.getElementById("display");
@@ -14,17 +15,39 @@ function setDisplayElemVal(val) {
     e.value = val;
 }
 
+function isOperator(item) {
+    return /[-+*/]/g.test(item);
+}
+function resetAns() {
+    ans = "";
+}
+
+function resetEqn() {
+    eqn = "";
+}
+
+function isAnsEmpty() {
+    return ans == "";
+}
 function addDisplay(item) {
+    if(!isAnsEmpty()) {
+        if(isOperator(item)) {
+            eqn = ans;
+        }
+        resetAns();
+    }
     eqn += item;
     setDisplayElemVal(eqn);
 }
 
 function clearEqn() {
-    eqn = "";
+    resetEqn();
+    resetAns();
+    setDisplayElemVal(eqn);
 }
 
 function evaluateDisplay() {
-    var ans = eval(eqn);
+    ans = eval(eqn);
     setDisplayElemVal(ans);
-    clearEqn();
+    resetEqn();
 }
