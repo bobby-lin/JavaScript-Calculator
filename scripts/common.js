@@ -18,6 +18,7 @@ function setDisplayElemVal(val) {
 function isOperator(item) {
     return /[-+*/]/g.test(item);
 }
+
 function resetAns() {
     ans = "";
 }
