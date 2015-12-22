@@ -2,10 +2,61 @@ body {
     background-color: black;
 }
 
+table {
+    border-color: transparent;
+}
+
 #display {
     text-align: right;
+    background-color: transparent;
+    color: gold;
+    border-color: gold;
+    font-size: xx-large;
+    width: 365px;
+    height: 75px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 20px;
 }
 
 #header {
     color: gold;
+}
+
+.input-btn {
+    background-color: transparent;
+    color: gold;
+    border-color: gold;
+    font-size: xx-large;
+    width: 75px;  
+    height: 75px;
+    margin: 10px;
+    border-radius: 15px;
+} 
+
+.op-btn {
+    border-color: white;
+    color: white;
+    font-size: 3em;
+}
+
+.input-btn:hover {
+    background-color: gold;
+    color: black;
+}
+
+.op-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+#clear-btn {
+    border-color: red;
+    color: red;
+    font-size: 3em;
+}
+
+#clear-btn:hover {
+    background-color: red;
+    color: white;
 }
